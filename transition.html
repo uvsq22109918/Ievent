@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attente de la validation de la transaction</title>
+<link rel="stylesheet" href="transition.css">
+</head>
+<body>
+    <div id="first">
+        <button  class="btn" onclick="Message()">Confirmer la transaction </button>
+        <input  class="btn1" type = "button" value = "Annuler la transaction"  onclick = "history.back()">
+    </div>
+    <div id="second" class="container">
+        <div class="yellow"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="violet"></div>
+    </div>
+        <!--<button class="btn2 "id="third" action="Pay.html">YOUR LINK</button>-->
+        <form  id="third" action="Pay.html">
+            <input class="btn2" type="submit" value="Votre transaction" />
+        </form>
+    <script>
+        first.onclick = (function(){
+        first.style.display = "none"
+        second.style.display = "block"
+            setTimeout(function(){
+                second.style.display = "none"
+                third.style.display = "block"
+            },6000)
+    })
+
+    function Message() {
+       var msg="Patientez le temps que votre transaction se termine, vous serez redirigé vers le lien qui concerne votre paiement";
+       console.log(msg)
+       alert(msg);
+   }
+    </script>
+</body>
+</html>
